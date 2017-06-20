@@ -1,0 +1,45 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a {
+  color: #347DCB;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+.all-pictures {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 5vw;
+}
+
+.each-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  flex-basis: 23%;
+  margin: .5vw;
+  text-align: center;
+}
+
+.text {
+  font-family: sans-serif;
+}
+
+.name {
+  font-size: 1.7vw;
+}

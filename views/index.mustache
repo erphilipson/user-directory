@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title>User Directory</title>
+    <link rel='stylesheet' type='text/css' href='main.css'>
   </head>
   <body>
-    <div class="all-pictures">
-      <div class="each-picture">
-        <img src="{{avatar}}"></img>
-        <p>{{name}}</p>
-        <p>{{job}}</p>
-        <p>{{company}}</p>
+    <div class='all-pictures'>
 
 
+        {{#data.users}}
+        <!-- <a href="localhost:3000/:name"> -->
+        <div class='each-item'>
+          <a href="localhost:3000/:id"><img src='{{avatar}}'  class='images'></img></a>
+          <div class='text'>
+            <a href="localhost:3000/:id"><span class='name'>{{name}}</span></a><br>
+            <span class='job'>{{job}}</span><br>
+            <span class='company'>{{company}}</span><br>
+          </div>
+        </div>
+      <!-- </a> -->
 
-      </div>
+        {{/data.users}}
+
+
     </div>
 
   </body>
