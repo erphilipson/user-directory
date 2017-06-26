@@ -8,25 +8,25 @@
   <body>
     <div class='all-pictures'>
 
-      {{#data.users}}
+      {{#users}}
 
         <div class='each-item'>
-          <a href="localhost:3000/:id"><img src='{{avatar}}'  class='images'></img></a>
+          <a href="./{{id}}"><img src='{{avatar}}'  class='images'></img></a>
           <div class='text'>
-            <a href="localhost:3000/:id"><span class='name'>{{name}}</span></a><br>
+            <a href="./{{id}}" target='_parent'><span class='name'>{{name}}</span></a><br>
             <span class='job'>{{job}}</span><br>
             <span class='company'>{{company}}</span>
           </div>
         </div>
 
-      {{/data.users}}
+      {{/users}}
 
     <script>
-    let abc = document.querySelectorAll('.job');
-    for (let i=0; i<abc.length; i++) {
-      if (!abc[i].textContent ) {
-        abc[i].textContent = 'Available for hire';
-        abc[i].setAttribute('class', 'unemployed');}}
+    let job = document.querySelectorAll('.job');
+    for (let i=0; i<job.length; i++) {
+      if (!job[i].textContent ) {
+        job[i].textContent = 'Available for hire';
+        job[i].setAttribute('class', 'unemployed');}}
     </script>
 
 
